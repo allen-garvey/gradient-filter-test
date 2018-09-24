@@ -1,0 +1,73 @@
+html, body{
+    font-family: "Liberation Sans", system-ui, -apple-system, "Helvetica Neue", Helvetica, "Segoe UI", Arial, "Ubuntu", "Noto Sans", "Oxygen-Sans", sans-serif;
+    padding-bottom: 150px;
+}
+
+html, body, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+.hidden, [v-cloak], datalist{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+canvas{
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+input[disabled="disabled"], button[disabled="disabled"]{
+    cursor: not-allowed;
+}
+
+fieldset{
+    border: none;
+    padding: 0;
+}
+legend{
+    font-size: 14px;
+}
+
+//select and color input styles loosely based on bootstrap 3 .form-control
+select, input{
+    font-size: 14px;
+    line-height: 1.42857;
+    padding: 4px 6px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+    &:focus{
+        border-color: #66afe9;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+        outline: 0;
+    }
+}
+//text inputs
+input:not([type]), input[type="text"], input[type="url"]{
+    width: 16em;
+    max-width: 100%;
+    color: #333;
+}
+input[type="range"]{
+    flex-basis: 50%;
+    max-width: 100%;
+}
+
+.spread-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
